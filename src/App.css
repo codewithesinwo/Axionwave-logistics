@@ -1,0 +1,158 @@
+#root {
+  min-height: 100vh;
+}
+
+.workspace {
+  width: min(1100px, 94vw);
+  margin: 2.5rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.workspace__topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(110deg, #0a4f54, #1f7b71);
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  color: #f2fffb;
+  box-shadow: 0 8px 28px rgba(9, 41, 44, 0.25);
+}
+
+.workspace__brand {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.workspace__switch {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.workspace__switch button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  background: rgba(255, 255, 255, 0.14);
+  color: #effff9;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.workspace__switch button.is-active {
+  background: #ffd9ae;
+  color: #663b00;
+}
+
+.dashboard {
+  display: grid;
+  gap: 1rem;
+}
+
+.dashboard__header {
+  background: #ffffff;
+  border: 1px solid #dde7e4;
+  border-radius: 14px;
+  padding: 1.2rem;
+}
+
+.dashboard__header h1 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.dashboard__header p {
+  margin: 0.4rem 0 0;
+  color: #506368;
+}
+
+.dashboard__metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
+}
+
+.metric-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #dee7e4;
+  padding: 0.95rem;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.metric-card span {
+  color: #4b6168;
+  font-size: 0.9rem;
+}
+
+.metric-card strong {
+  font-size: 1.4rem;
+  color: #0d3130;
+}
+
+.metric-card small {
+  color: #708488;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #dde7e4;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.72rem 0.5rem;
+  border-bottom: 1px solid #e8efed;
+  font-size: 0.92rem;
+}
+
+th {
+  color: #3f5961;
+  font-weight: 700;
+}
+
+td {
+  color: #1f3439;
+}
+
+@media (max-width: 680px) {
+  .workspace {
+    margin-top: 1rem;
+  }
+
+  .workspace__topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .workspace__switch {
+    width: 100%;
+  }
+
+  .workspace__switch button {
+    flex: 1;
+  }
+}
