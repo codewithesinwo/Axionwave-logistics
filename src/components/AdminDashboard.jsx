@@ -163,7 +163,7 @@ function AdminDashboard() {
                   <tr key={payment.id} className="border-t border-slate-100">
                     <td className="px-2 py-2 font-medium">{payment.id}</td>
                     <td className="px-2 py-2">{payment.customer}</td>
-                    <td className="px-2 py-2">?{payment.amount.toLocaleString()}</td>
+                    <td className="px-2 py-2">${payment.amount.toLocaleString()}</td>
                     <td className="px-2 py-2">
                       <span
                         className={`rounded-full px-2 py-1 text-xs font-semibold ${
